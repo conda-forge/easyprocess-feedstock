@@ -1,4 +1,4 @@
-{% set version = "0.2.5" %}
+{% set version = "0.2.8" %}
 
 package:
   name: easyprocess
@@ -7,10 +7,10 @@ package:
 source:
   fn: easyprocess-{{ version }}.tar.gz
   url:  https://github.com/ponty/EasyProcess/archive/{{version}}.tar.gz
-  sha256: 7e2efc5ee0cdad4b74587287411cbf44afb9eebc871c9a6ea3ef0de36641b7f7
+  sha256: c5db8adac49dac0fa24f5aa23be44f063cceb5bad9a91ddd6c27f0e3563145b8
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
