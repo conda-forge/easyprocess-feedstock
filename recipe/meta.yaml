@@ -1,4 +1,4 @@
-{% set version = "0.2.9" %}
+{% set version = "0.2.10" %}
 
 package:
   name: easyprocess
@@ -7,7 +7,7 @@ package:
 source:
   fn: easyprocess-{{ version }}.tar.gz
   url:  https://github.com/ponty/EasyProcess/archive/{{version}}.tar.gz
-  sha256: 35e665905ccc4f604e7adb7fc95b6c11440e9161800a8e094ab3fa8424b3f3f6
+  sha256: 72a59e5c350292fb003b1679f11c543d803d2187cba75ac8993a01d0f37003c1
 
 build:
   number: 0
