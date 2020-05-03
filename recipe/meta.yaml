@@ -1,4 +1,4 @@
-{% set version = "0.2.10" %}
+{% set version = "0.3" %}
 
 package:
   name: easyprocess
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: easyprocess-{{ version }}.tar.gz
-  url:  https://github.com/ponty/EasyProcess/archive/{{version}}.tar.gz
-  sha256: 72a59e5c350292fb003b1679f11c543d803d2187cba75ac8993a01d0f37003c1
+  url: https://github.com/ponty/EasyProcess/archive/{{ version }}.tar.gz
+  sha256: eea7f7f2074b599ca4cb2a14c098eb0a0e21f8886eb38c45b8c0b3cb89e7aff9
 
 build:
   number: 0
@@ -19,7 +19,7 @@ requirements:
     - setuptools
   run:
     - python
-    
+
 
 test:
   imports:
@@ -27,9 +27,9 @@ test:
 
 about:
   home: https://github.com/ponty/EasyProcess
-  license: BSD 2-clause 
+  license: BSD 2-clause
   license_file: LICENSE.txt
-  summary: 'Easy to use python subprocess interface'
+  summary: Easy to use python subprocess interface
 
 extra:
   recipe-maintainers:
