@@ -1,33 +1,39 @@
+{% set name = "easyprocess" %}
 {% set version = "0.3" %}
 
+
 package:
-  name: easyprocess
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: easyprocess-{{ version }}.tar.gz
-  url: https://github.com/ponty/EasyProcess/archive/{{ version }}.tar.gz
-  sha256: eea7f7f2074b599ca4cb2a14c098eb0a0e21f8886eb38c45b8c0b3cb89e7aff9
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/EasyProcess-{{ version }}.tar.gz
+  sha256: fb948daac01f64c1e49750752711253614846c6fc7e5692a718a7408f2ffb984
 
 build:
-  number: 2
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 3
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.6
+    - pip
   run:
-    - python
-
+    - python >=3.6
 
 test:
   imports:
     - easyprocess
+    - easyprocess.examples
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/ponty/EasyProcess
-  license: BSD 2-clause
+  license: BSD-2-Clause
   license_file: LICENSE.txt
   summary: Easy to use python subprocess interface
 
