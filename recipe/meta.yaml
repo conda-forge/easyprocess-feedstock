@@ -1,5 +1,5 @@
 {% set name = "easyprocess" %}
-{% set version = "0.3" %}
+{% set version = "1.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/EasyProcess-{{ version }}.tar.gz
-  sha256: fb948daac01f64c1e49750752711253614846c6fc7e5692a718a7408f2ffb984
+  sha256: 885898302a57aab948973e8b5d32a4229392b9fb2d986ab1d4ffd590e5ba90ec
 
 build:
-  number: 3
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
